@@ -1,0 +1,60 @@
+<!-- thank_you.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            background: beige;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            max-width: 100px; /* Adjust the max-width as needed */
+        }
+    </style>
+    <script>
+        // Redirect to the main page after a delay
+        let countdown = 3;
+
+        function updateCountdown() {
+            document.getElementById('countdown').innerText = countdown;
+        }
+
+        function redirectAfterDelay() {
+            if (countdown === 0) {
+                window.location.href = "/";
+            } else {
+                countdown--;
+                updateCountdown();
+                setTimeout(redirectAfterDelay, 1000); // 1000 milliseconds (1 second)
+            }
+        }
+
+        // Start the countdown
+        setTimeout(redirectAfterDelay, 1000); // Initial delay before starting countdown
+        updateCountdown(); // Update the initial countdown value
+    </script>
+</head>
+
+<body>
+    <br>
+    <h1>Thank You for Your Order!</h1>
+
+    <br>
+    <p>Redirecting to the main page in <span id="countdown">3</span> seconds...</p>
+    <img src="https://yt3.ggpht.com/GZ9ZEFu6KBTqwUVMlmv35r53ds-8K8PSeYFxJdLtVUZ4AvJzGSV4E2NjiuAyM53fvgKlAmDfDG0=s176-c-k-c0x00ffffff-no-rj" alt="Your Logo" class="logo" width="50px" height="50px">
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!-- templates/gshockbuy.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Addicts - Buy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: beige; /* Change background color to beige */
+        }
+
+        h1 {
+            text-align: center;
+            color: black; /* Change text color to black */
+        }
+
+        .purchase-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: black; /* Change label color to black */
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .purchase-btn {
+            background-color: black; /* Change button background color to black */
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            max-width: 100px; /* Adjust the max-width as needed */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>PorePerfectTools - Buy</h1>
+
+    <div class="purchase-form">
+        <form action="{{ url_for('purchase') }}" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" required>
+
+            <label for="address">Address</label>
+            <input type="text" name="address" required>
+
+            <label for="credit_card">Email</label>
+            <input type="text" name="email" required>
+
+            <label for="zip_code">ZIP Code</label>
+            <input type="text" name="zip_code" required>
+
+            <label for="credit_card">Credit Card</label>
+            <input type="text" name="credit_card" required>
+
+            <label for="credit_card">CVC Number</label>
+            <input type="text" name="cvc" required>
+
+            <label for="credit_card">Expiration Date</label>
+            <input type="text" name="exp" required>
+            <center>
+            <button type="submit" class="purchase-btn">Submit Purchase</button>
+            </center>
+        </form>
+    </div>
+
+</body>
+
+</html>
